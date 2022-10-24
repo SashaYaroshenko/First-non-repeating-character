@@ -1,7 +1,13 @@
-﻿public class Kata
+﻿using System.Linq;
+
+public class Kata
 {
     public static string FirstNonRepeatingLetter(string s)
     {
+        if (string.IsNullOrEmpty(s))
+        {
+            return "";
+        }
         char[]charS = s.ToCharArray();
         char[]charSlower = s.ToLower().ToCharArray();
         int count = 0;
